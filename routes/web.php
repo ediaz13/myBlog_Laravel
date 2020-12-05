@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -31,3 +31,7 @@ Route::get('/admin/posts/example', array('as'=>'admin.home', function () {
 
     return "this url is ". $url;
 }));
+
+*/
+
+Route::get('/post', '\App\Http\Controllers\PostController@index');
