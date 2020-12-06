@@ -39,3 +39,5 @@ Route::get('/admin/posts/example', array('as'=>'admin.home', function () {
 Route::resource('posts', '\App\Http\Controllers\PostController');
 
 Route::get('/contact', '\App\Http\Controllers\PostController@contact');
+
+Route::get('post/{id}/{name}', '\App\Http\Controllers\PostController@showPost');
