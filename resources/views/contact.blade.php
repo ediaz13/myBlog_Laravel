@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
+    <h1>Contact page</h1>
+@endsection
 
-    </head>
-    <body class="container">
-        <h1>Contact page</h1>
-    </body>
-</html>
+
+@section('footer')
+    <script>
+        alert('Hello Noelio!');
+    </script>
+@endsection
