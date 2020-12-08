@@ -1,0 +1,30 @@
+change 
+Route::get('/', 'HomeController@index')
+
+Por
+
+Route::get('/checking', '\App\Http\Controllers\HomeController@index');
+
+Orrr
+
+use App\Http\Controllers\HomeController; //
+
+Route::get('/', [EdwinsController::class, 'index']); 
+
+
+Para ver la lista de Resources en 
+php artisan route:list
+
+Comandos de artisan
+
+php artisan migrate
+
+php artisan migrate:reset
+
+php artisan migrate:status
+
+Add column
+php artisan make:migration add_is_admin_column_to_post_table --table="posts"
+
+Create Table
+php artisan make:migration create_posts_table --create="posts"
