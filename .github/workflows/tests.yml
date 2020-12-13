@@ -11,6 +11,7 @@ jobs:
       - name: Run composer install
         run: composer install -n --prefer-dist
       - name: Run npm
+        run: rm -rf node_modules package-lock.json
         run: npm install
       - name: Run yarn
         run: yarn && yarn dev
