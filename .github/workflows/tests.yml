@@ -10,8 +10,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run composer install
         run: composer install -n --prefer-dist
-      - name: Run npm
+      - name: Remove npm
         run: rm -rf node_modules package-lock.json
+      - name: Run npm
         run: npm install
       - name: Run yarn
         run: yarn && yarn dev
