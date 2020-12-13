@@ -14,10 +14,14 @@ jobs:
         run: rm -rf node_modules package-lock.json
       - name: Run npm
         run: npm install
-      - name: Run tests
-        run: ./vendor/bin/phpunit
+     - name: Generate Key
+        run: php artisan key:generate
+      - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
-          APP_ENV: testing
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+        run: vendor/bin/phpunit
+      - name: Execute tests (Unit and Feature tests) via JEST
+        run: node_modules/.bin/jest
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         if: failure()
