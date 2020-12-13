@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run composer install
         run: composer install -n --prefer-dist
+      - name: Run npm
+        run: npm start
       - name: Run yarn
         run: yarn && yarn dev
       - name: Run tests
